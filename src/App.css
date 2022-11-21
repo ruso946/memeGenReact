@@ -38,19 +38,18 @@
   font-family: Monospace, "Lucida Console";
 }
 
-
-#figCBottom1 {
-  font-family: Fantasy, Copperplate;
+.sizeFont1{
+  font-size: 1em;
 }
 
-#figCBottom2 {
-  font-family: Cursive, "Lucida Handwriting";
+.sizeFont2{
+  font-size: 2em;
 }
 
-#figCBottom3 {
-  font-family: Serif, Georgia;
+.sizeFont3{
+  font-size: 3em;
 }
 
-#figCBottom4 {
-  font-family: Monospace, "Lucida Console";
+.sizeFont4{
+  font-size: 4em;
 }

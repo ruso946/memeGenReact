@@ -2,13 +2,17 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 const Dropdown = () => {
-    let [imgElegida,setImgElegida] = useState("/pastelitos.png");
+    let [imgElegida,setImgElegida] = useState();
     const manejaValorImg = (e)=>{
-        setImgElegida (e.target.src);            
+        setImgElegida (e.target.src);        
     }
         
     useEffect(() => {        
-        let imagenDelOtroComponente = document.getElementById("imgEleccion");        
+        let imagenDelOtroComponente = document.getElementById("imgEleccion");
+        /*acá hay que hacer que descargue la imagen a una carpeta, con un nombre
+        de archivo establecido, y ponerese archivo como fuente fija de la imagen
+         en el div de Eleccion que va a ser exportado
+        */          
         imagenDelOtroComponente.setAttribute("src",`${imgElegida}`);        
     });
     const urlApi = 'https://api.memegen.link/templates/';    
@@ -34,7 +38,7 @@ const Dropdown = () => {
                     }
                 );
                 document.getElementById("ulDrpdwn").innerHTML= textoInner;
-                const ListaDeLi = document.getElementsByClassName("botonLi");                                
+                // const ListaDeLi = document.getElementsByClassName("botonLi");                                
             }
             
         }
