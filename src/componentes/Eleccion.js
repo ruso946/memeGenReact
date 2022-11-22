@@ -11,8 +11,7 @@ const exportRef = useRef();
             <div  id="canvasParaExportar" ref={exportRef}>
                 <figure  id="figureEleccion">
                     <figcaption id="figCTop"></figcaption>
-                    <img id="imgEleccion" src="/pastelitos.png" width="300" height="auto" alt="eleccion de imagen del Dropdown"></img>                    
-                    {/* <img id="imgEleccion2" src="/pastelitos.png" width="300" height="auto" alt="eleccion de imagen del Dropdown"></img> */}
+                    <img id="imgEleccion" src="" width="300" height="auto" alt="eleccion de imagen del Dropdown"></img>                                        
                     <figcaption id="figCBottom"></figcaption>
                 </figure>
                 
