@@ -53,3 +53,19 @@
 .sizeFont4{
   font-size: 4em;
 }
+
+.colorFont1{
+  color: black;
+}
+
+.colorFont2{
+  color: blueviolet;
+}
+
+.colorFont3{
+  color: green;
+}
+
+.colorFont4{
+  color: red;
+}

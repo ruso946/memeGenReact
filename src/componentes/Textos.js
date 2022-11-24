@@ -13,11 +13,10 @@ const Textos = ()=>{
     useEffect(() => {
         const figCTop = document.getElementById("figCTop");        
         figCTop.innerText = textoIngresado[0];
-        figCTop.className = tipoFont+" sizeFont"+sizeFont;
+        figCTop.className = tipoFont+" sizeFont"+sizeFont+" colorFont"+colorFont;
         const figCBottom = document.getElementById("figCBottom");        
-        figCBottom.innerText = textoIngresado[1];
-        // figCBottom.className = tipoFont2;
-        figCBottom.className = tipoFont2+" sizeFont"+sizeFont2;
+        figCBottom.innerText = textoIngresado[1];        
+        figCBottom.className = tipoFont2+" sizeFont"+sizeFont2+" colorFont"+colorFont2;
         
     }); 
     
@@ -35,16 +34,25 @@ const Textos = ()=>{
     const manejaSetSizeFont = (e)=>{
         setSizeFont(e.target.value);
         console.log("desde size font: ",e.target.value);
-
     }
      
     let [sizeFont2, setSizeFont2] = useState({sizeFont2});
     const manejaSetSizeFont2 = (e)=>{
         setSizeFont2(e.target.value);
         console.log("desde size font2: ",e.target.value);
-
     }
-      
+    
+    let [colorFont, setColorFont] = useState({colorFont});
+    const manejaSetColorFont = (e)=>{
+        setColorFont(e.target.value);
+        console.log("desde Color font: ",e.target.value);
+    }
+
+    let [colorFont2, setColorFont2] = useState({colorFont2});
+    const manejaSetColorFont2 = (e)=>{
+        setColorFont2(e.target.value);
+        console.log("desde Color font2: ",e.target.value);
+    }
     
 
     return (
@@ -75,13 +83,29 @@ const Textos = ()=>{
                         <option value="3">Tamaño letra grande</option>
                         <option value="4">Tamaño letra muy grande</option>
                     </select>
-                </div >                
+                </div >
+                <div id="coloresLetraArriba">   
+                    <select className={`form-select form-select-sm p-2 mx-auto my-2 colorFont+${colorFont}`}  onChange={manejaSetColorFont}>
+                        <option className="colorFont1" value="1">Color1 Negro</option>
+                        <option className="colorFont2" value="2">Color2 Violeta</option>
+                        <option className="colorFont3" value="3">Color3 Verde</option>
+                        <option className="colorFont4" value="4">Color4 Rojo</option>
+                    </select>
+                </div >               
                 <input type="text" placeholder="ingrese su texto" onInput={manejaSetTexto} id="input1" className = {`mb-2 mx-auto ${tipoFont}`} />
                 <label className="mb-4" for="input1">Texto de arriba</label>
             </div>
             <div className='p-2 border border-2 p-2'>                
                 <label className="mt-4" for="input2">Texto de abajo</label>
                 <input type="text" placeholder="ingrese su texto" onInput={manejaSetTexto} id="input2" className = {`mt-2 mx-auto ${tipoFont2}`} />
+                <div id="coloresLetraAbajo">   
+                    <select className="form-select form-select-sm p-2 mx-auto my-2" onChange={manejaSetColorFont2}>
+                        <option className="colorFont1" value="1">Color1 Negro</option>
+                        <option className="colorFont2" value="2">Color2 Violeta</option>
+                        <option className="colorFont3" value="3">Color3 Verde</option>
+                        <option className="colorFont4" value="4">Color4 Rojo</option>
+                    </select>
+                </div >               
                 <div>
                     <select className="form-select form-select-sm p-2 mx-auto my-2" onChange={manejaSetSizeFont2}>
                         <option value="1">Tamaño letra chico</option>
@@ -117,3 +141,4 @@ const Textos = ()=>{
 
 
 export default Textos;
+
