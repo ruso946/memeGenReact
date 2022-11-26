@@ -8,12 +8,9 @@ const Dropdown = () => {
     }
         
     useEffect(() => {        
-        let imagenDelOtroComponente = document.getElementById("imgEleccion");
-        /*acá hay que hacer que descargue la imagen a una carpeta, con un nombre
-        de archivo establecido, y ponerese archivo como fuente fija de la imagen
-         en el div de Eleccion que va a ser exportado
-        */          
-        imagenDelOtroComponente.setAttribute("src",`${imgElegida}`);        
+        let imagenDelOtroComponente = document.getElementById("canvasParaExportar");
+                
+        imagenDelOtroComponente.style.setProperty("background-image",`url("${imgElegida}")`);        
     });
     const urlApi = 'https://api.memegen.link/templates/';    
     try{
